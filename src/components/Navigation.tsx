@@ -17,6 +17,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
     { id: 'subsystems' as Page, label: 'Subsystems' },
     { id: 'opmodes' as Page, label: 'OpModes' },
     { id: 'how-it-works' as Page, label: 'How It Works' },
+    { id: 'challenges' as Page, label: 'Challenges' },
     { id: 'mistakes' as Page, label: 'Common Mistakes' },
   ];
 
@@ -26,9 +27,10 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
         <div className="flex justify-between items-center h-16">
           <button
             onClick={() => onNavigate('landing')}
-            className="text-xl font-bold text-yellow-500 hover:text-yellow-400 transition-colors"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            Pr0teens
+            <img src="/pr0teens-drive-gears-logo-224x300.png" alt="Pr0teens" className="h-10 w-10" />
+            <span className="text-xl font-bold text-yellow-500">Pr0teens</span>
           </button>
 
           <button

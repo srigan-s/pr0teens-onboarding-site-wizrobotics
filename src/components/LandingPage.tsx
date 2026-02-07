@@ -1,4 +1,4 @@
-import { ArrowRight, Book, Code, Lightbulb, Map } from 'lucide-react';
+import { ArrowRight, Book, Code, Lightbulb, Map, Zap } from 'lucide-react';
 import { Page } from '../App';
 
 interface LandingPageProps {
@@ -10,6 +10,11 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
     <div className="min-h-screen bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-16 pt-16">
+          <img
+            src="/pr0teens-drive-gears-logo-224x300.png"
+            alt="Pr0teens Logo"
+            className="h-24 w-24 mx-auto mb-6"
+          />
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-yellow-500 mb-6">
             Pr0teens Programming Onboarding
           </h1>
@@ -61,6 +66,12 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
             title="How It Works"
             description="Follow the robot's decision-making from input to action"
             onClick={() => onNavigate('how-it-works')}
+          />
+          <FeatureCard
+            icon={<Zap size={32} />}
+            title="Challenges"
+            description="Test your skills with interactive coding challenges"
+            onClick={() => onNavigate('challenges')}
           />
         </div>
 
